@@ -1,0 +1,35 @@
+The solution involves either using a different justification method or adding a conditional check to handle cases with only two items.
+
+Here's a more robust solution using `space-around`:
+
+```css
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+}
+```
+
+Or using a conditional approach (This needs Javascript or a pre-processor):
+
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.item:nth-child(1){
+    margin-left: auto;
+}
+.item:nth-child(2){
+  margin-right: auto;
+}
+```
