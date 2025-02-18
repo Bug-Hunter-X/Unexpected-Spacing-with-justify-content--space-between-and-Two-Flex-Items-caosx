@@ -1,0 +1,16 @@
+The following CSS code snippet has an uncommon error that's easy to miss:
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+  flex: 1;
+}
+```
+
+This code aims to distribute three or more `.item` elements evenly within a `.container`. However, if you only have two `.item` elements, `justify-content: space-between` will cause unexpected spacing.  The last item will be pushed to the far right edge and only one space will be between the two items.
